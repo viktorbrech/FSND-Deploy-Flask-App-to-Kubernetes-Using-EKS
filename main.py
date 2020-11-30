@@ -1,5 +1,5 @@
 """
-A simple app to create a JWT token.
+A simple app to create a JWT token. (newly patched cluster)
 """
 import os
 import logging
