@@ -8,7 +8,7 @@ data:
       username: system:node:{{EC2PrivateDNSName}}
     - groups:
       - system:masters
-      rolearn: arn:aws:iam::<YOUR_ACCOUNT_ID>:role/UdacityFlaskDeployCBKubectlRole
+      rolearn: arn:aws:iam::<YOUR_ACCOUNT_ID>:role/UdacityFlaskDeployCBKubectlRoleTwo
       username: build
   mapUsers: |
     []
@@ -21,13 +21,20 @@ metadata:
     fieldsV1:
       f:data:
         .: {}
-        f:mapRoles: {}
         f:mapUsers: {}
     manager: eksctl
     operation: Update
     time: "2020-11-30T11:32:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:mapRoles: {}
+    manager: kubectl-patch
+    operation: Update
+    time: "2020-11-30T11:52:18Z"
   name: aws-auth
   namespace: kube-system
-  resourceVersion: "1796"
+  resourceVersion: "5203"
   selfLink: /api/v1/namespaces/kube-system/configmaps/aws-auth
   uid: 3c402a90-c735-4828-a51d-284d4c2eb373
